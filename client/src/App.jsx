@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Navbar from './components/Navbar'
 import { Route, Routes, useLocation } from 'react-router-dom'
 import Home from './pages/Home';
@@ -11,13 +11,16 @@ import Layout from './pages/HotelOwner/Layout';
 import Dashboard from './pages/HotelOwner/Dashboard';
 import AddRoom from './pages/HotelOwner/AddRoom';
 import ListRoom from './pages/HotelOwner/ListRoom';
-
+import { Toaster } from 'react-hot-toast';
 const App = () => {
 
   const isOwnerPath=useLocation().pathname.includes("owner");
 
+
+
   return (
     <div>
+      <Toaster/>
       {!isOwnerPath && <Navbar/>}
       {false && <HotelReg/>} 
       <div className='min-h-[70vh]'>

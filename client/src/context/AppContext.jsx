@@ -26,8 +26,8 @@ export const AppProvider = ({ children }) => {
 
     fetchToken();
   }, [getToken]);
-   
 
+  
 
   
 
